@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	
+	<title>responsive.html | Responsive Design | HTML5</title>
+	
+	<style type="text/css">
+body {
+	background-color: #eeeeee;
+	font: 1em/150% Helvetica;
+}
+
+h1 {
+	font: bold 36px/100% Helvetica;
+}
+
+h2 {
+	font: bold 30px/100% Helvetica;
+}
+
+/******************************************************************************
+ * STRUCTURE
+ ******************************************************************************/
+#pagewrap {
+	border: 1px solid red;
+	padding: 0;
+	width: 960px;
+	max-width: 70%;
+	margin: 20px auto;
+}
+
+video {
+	border: 1px solid red;
+	max-width: 100%;
+	height: auto;
+	margin: -1px;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 60%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-wrapper {
+	max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: 100%;
+}
+
+.container {
+	border: 1px solid red;
+	max-width: 90%;
+	margin: 20px auto;
+	width: 600px;
+}
+
+.container input[type="text"] {
+	border: 1px solid grey;
+	height: 30px;
+	width: 400px;
+	max-width: 70%;
+	min-width: 200px;
+}
+	</style>
+</head>
+
+<body>
+	<div id="pagewrap">
+		<h1>Responsive Design</h1>
+	
+		<h2>Elastic Videos (HTML5)</h2>
+
+		<video width="950px" controls="control" preload="none">
+			<source src="http://mediaelementjs.com/media/echo-hereweare.mp4" type="video/mp4" /> 
+			<source src="http://mediaelementjs.com/media/echo-hereweare.webm" type="video/webm" /> 
+			<source src="http://mediaelementjs.com/media/echo-hereweare.ogv" type="video/ogg" />
+		</video>
+
+		<h2>Elastic Videos (IFRAME)</h2>
+		<div class="video-wrapper">
+			<div class="video-container">
+				<iframe src="http://player.vimeo.com/video/6284199?title=0&byline=0&portrait=0" width="950px" frameborder="0"></iframe>
+			</div>
+		</div>
+
+		<h2>Elastic Images</h2>
+		<img src="http://cdn.hotnewsonglyrics.com/wp-content/uploads/2011/03/Avril-Lavigne-Everybody-Hurts-Lyrics.jpg">
+
+		<h2>Maximum Width</h2>
+		<div class="container">
+			<p>Text</p>
+			<p>Text</p>
+			<p>Text</p>
+			<p>Text</p>
+			<p>Text</p>
+		</div>
+
+		<h2>Minimum Width</h2>
+		<div class="container">
+			<input type="text" placeholder="min-width" />
+			<p>Text</p>
+			<p>Text</p>
+			<p>Text</p>
+			<p>Text</p>
+			<p>Text</p>
+		</div>
+	</div>
+</body>
+
+</html>
