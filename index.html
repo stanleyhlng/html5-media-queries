@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>index.html | Media Queries | HTML5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	<style type="text/css">
+body {
+	background-color: #eeeeee;
+	font: 1em/150% Helvetica;
+}
+
+h1 {
+	font: bold 36px/100% Helvetica;
+}
+
+/******************************************************************************
+ * STRUCTURE
+ ******************************************************************************/
+#pagewrap {
+	border: 1px solid red;
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+#header {
+	border: 1px solid red;
+	height: 180px;
+}
+
+#content {
+	border: 1px solid red;
+	width: 600px;
+	float: left;
+}
+
+#sidebar {
+	border: 1px solid red;
+	width: 300px;
+	float: right;
+}
+
+#footer {
+	border: 1px solid red;
+	clear: both;
+}
+
+
+/******************************************************************************
+ * MEDIA QUERIES
+ ******************************************************************************/
+
+/* 
+ * for 980px or less 
+ * - fluid container
+ */
+@media screen and (max-width: 980px) {
+
+#pagewrap {
+	border: 1px solid blue;
+	width: 95%;
+}
+
+#content {
+	border: 1px solid blue;
+	width: 65%;
+}
+
+#sidebar {
+	border: 1px solid blue;
+	width: 30%;
+}
+
+}
+
+
+/* 
+ * for 700px or less
+ * - #content and #sidebar = auto-width
+ * - remove the float
+ */
+@media screen and (max-width: 700px) {
+
+#content {
+	border: 1px solid green;
+	width: auto;
+	float: none;
+}
+
+#sidebar {
+	border: 1px solid green;
+	width: auto;
+	float: none;
+}
+
+}
+
+/*
+ * for 480px or less
+ * - #header - height to auto, font-size = 24px
+ * - #sidebar - hide
+ */
+@media screen and (max-width: 480px) {
+
+h1 {
+	font-size: 24px;
+}
+
+#header {
+	border: 1px solid yellow;
+	height: auto;
+}
+
+#sidebar {
+	display: none;
+}
+
+}
+	</style>
+</head>
+<body>
+	<div id="pagewrap">
+
+		<div id="header">
+			<h1>Header</h1>
+		</div>
+
+		<div id="content">
+			<h2>Content</h2>
+			<p>text</p>
+			<p>text</p>
+			<p>text</p>
+			<p>text</p>
+			<p>text</p>
+		</div>
+
+		<div id="sidebar">
+			<h3>Sidebar</h3>
+			<p>text</p>
+			<p>text</p>
+		</div>
+
+		<div id="footer">
+			<h4>Footer</h4>
+		</div>
+	</div>
+</body>
+</html>
